@@ -1,0 +1,11 @@
+
+version: 0.0
+os: linux
+files:
+  - source: /source/apio-rest/target/api.war
+    destination: /home/ubuntu
+hooks:
+  ApplicationStart:
+    - location: /deploy_staging_web.sh
+      timeout: 300
+      runas: root
